@@ -23,13 +23,7 @@ Each frame contains 1124 bytes, and each field is sequentially concatenated
 
 3. Change the IP address of the network adapter to 192.168.0.3 
 
-4. Run the udp receiving tool from '../../tools/receive_tools.exe',and the tool will send radar data over udp to port 8080.
-
-5. Run 'plot_data.py' to plot radar data real time.
-
-    ```python
-    python plot_data.py
-    ```
+4. Run the udp receiving tool from '../../tools/mimo-udp.exe',and the tool will send radar data over udp to port 8080.
 
 6. Run 'receiving_data_and_save.py' to save radar data.
 
@@ -40,25 +34,15 @@ Each frame contains 1124 bytes, and each field is sequentially concatenated
 7. Modifying the radar data path,folder  can only store dataset with the suffix dat.
 
     ```python
-    path = "./datas/"
+    path = "./datas/1669277453045.dat"
     range_data = read_data(path)
-    (frame_cnt,bin_cnt) = range_data.shape
+    (frame_cnt,tx_cnt,rx_cnt,bin_cnt) = range_data.shape
     ```
 
 8. Run plot data program in terminal:
 
     ```
     python plot_data_from_file.py
-    ```
-
-9. You can down-sampling the data:
-
-    ```python
-    # By default,raw data fps is 2042
-    RAW_FPS = 2042
-    
-    # The fps after sampling, FPS < RAW_FPS
-    FPS = 100
     ```
 ##### Use conda virtual environment
 1. install anaconda and update conda
