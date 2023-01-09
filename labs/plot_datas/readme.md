@@ -115,6 +115,10 @@ Each frame contains 1124 bytes, and each field is sequentially concatenated
 
    the first frame number is abnormal due to data loss.
 
-4. **About loss data**
+4. **About the Bin offset**
+
+   the offset of bin is related to the length of the signal cable and is about 20.
+
+5. **About loss data**
 
    the unstable cpu may cause udp packet loss.
